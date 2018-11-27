@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkinsclaim
+spec:
+  storageClassName: "oci"
+  selector:
+    matchLabels:
+      failure-domain.beta.kubernetes.io/zone: "US-ASHBURN-AD-1"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
