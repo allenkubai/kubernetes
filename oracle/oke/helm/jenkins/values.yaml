@@ -1,9 +1,10 @@
 Master:
   InstallPlugins:
-    - kubernetes:1.12.6
+    - kubernetes:1.13.6
     - workflow-job:2.24
     - workflow-aggregator:2.5
     - credentials-binding:1.16
+    - blueocean:1.9.0
     - git:3.9.1
     - oracle-cloud-infrastructure-compute:1.0.4
   Cpu: "1"
