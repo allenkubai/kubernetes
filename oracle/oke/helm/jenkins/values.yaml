@@ -1,18 +1,18 @@
-master:
+Master:
   InstallPlugins:
-    - kubernetes:1.14.9
+    - kubernetes:1.15.2
     - kubernetes-cli:1.6.0
     - workflow-job:2.32
     - workflow-aggregator:2.6
     - credentials-binding:1.18
-    - blueocean:1.14.0
+    - blueocean:1.16.0
     - git:3.9.3
     - oracle-cloud-infrastructure-compute:1.0.4
   Cpu: "1"
   Memory: "3500Mi"
   JavaOpts: "-Xms3500m -Xmx3500m"
   ServiceType: ClusterIP
-agent:
+Agent:
   Enabled: true
   resources:
     requests:
@@ -21,11 +21,10 @@ agent:
     limits:
       cpu: "1"
       memory: "512Mi"
-persistence:
+Persistence:
   ExistingClaim: jenkinsclaim
-networkPolicy:
+NetworkPolicy:
   ApiVersion: networking.k8s.io/v1
 rbac:
-  create: true
-  serviceAccount:
-    name: cd-jenkins
+  install: true
+  serviceAccountName: cd-jenkins
