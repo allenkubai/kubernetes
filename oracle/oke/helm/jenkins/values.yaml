@@ -21,7 +21,7 @@ Agent:
       cpu: "1"
       memory: "512Mi"
 Persistence:
-  Size: 100Gi
+  ExistingClaim: jenkinsclaim
 NetworkPolicy:
   ApiVersion: networking.k8s.io/v1
 rbac:
